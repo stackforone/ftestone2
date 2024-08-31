@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กระเป๋า</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .header-container3 {
+            height: 20px;
+        }
+        .header3 {
+            text-align: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+        .header3 h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header3 p, .header3 h3, .header3 p2 {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .header3 h3 {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .content2 {
+            padding: 20px;
+        }
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        .icon-item {
+            text-align: center;
+        }
+        .icon-item img, .icon-item i {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .icon-item p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .status {
+            margin-top: 5px;
+        }
+        .account-summary {
+            padding: 20px;
+        }
+        .account-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .account-card {
+            background-color: #1E1E1E;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .account-icon img {
+            width: 40px;
+            height: 40px;
+        }
+        .account-info {
+            flex-grow: 1;
+            padding-left: 15px;
+        }
+        .account-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .account-actions, .account-actions2 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .account-btn-deposit, .account-btn-buy, .account-btn-sell {
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            margin-top: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .account-btn-buy, .account-btn-sell {
+            margin-top: 0;
+        }
+
+        /* Style สำหรับซ่อนหน้าเพจ */
+        .page {
+            display: none;
+        }
+
+        /* Style สำหรับแสดงหน้าเพจที่กำลังใช้งาน */
+        .active-page {
+            display: block;
+        }
+
+        /* Link styling */
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        a i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- หน้ากระเป๋า -->
+<div class="page" id="wallet-page">
+    <div class="header-container3"></div>
+    <div class="header3">
+        <h2>กระเป๋า</h2>
+        <p>ทรัพย์สิน (USDT)</p>
+        <h3>0 USDT</h3>
+        <p>฿0.00 THB</p>
+        <p2>ข้อมูล ณ : 07:05</p2>
+    </div>
+  
+    <div class="content2">
+        <div class="icon-grid">
+            <div class="icon-item">
+                <i class="fas fa-university"></i>
+                <p>ผูกบัญชีธนาคาร</p>
+                <p class="status" style="color:red;">ไม่ได้ระบุ</p>
+            </div>
+            <div class="icon-item">
+                <img src="IMG_0206.db07b0e8.png">
+                <p>ซื้อเหรียญ</p>
+            </div>
+            <div class="icon-item">
+                <img src="IMG_0206.db07b0e8.png">
+                <p>ฝากเงิน</p>
+            </div>
+            <div class="icon-item">
+                <img src="IMG_0207.13d060b2.png">
+                <p>ถอนเงิน THB</p>
+            </div>
+            <div class="icon-item">
+                <img src="IMG_0207.13d060b2.png">
+                <p>ถอนเงิน USDT</p>
+            </div>
+            <div class="icon-item">
+                <img src="IMG_0201.5834941fff.png">
+                <p>รายการถอนเงิน/เติมเงิน</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="account-summary">
+        <h4 class="account-title">เหรียญทั้งหมดของคุณ</h4>
+
+        <div class="account-card">
+            <div class="account-icon">
+                <img src="USDT.png" class="account-img">
+            </div>
+            <div class="account-info">
+                <p class="account-currency-name">ดอลลาร์สหรัฐ</p>
+                <p class="account-amount">รวม: 40 USDT</p>
+                <p class="account-availability">มีจำหน่าย: 40 USDT</p>
+                <p class="account-in-order">ตามลำดับ: 0.00 USDT</p>
+            </div>
+            <div class="account-actions">
+                <button class="account-btn-deposit">ฝากเงิน</button>
+            </div>
+        </div>
+
+        <div class="account-card">
+            <div class="account-icon">
+                <img src="BTC.png" class="account-img">
+            </div>
+            <div class="account-info">
+                <p class="account-currency-name">บีทีซี</p>
+                <p class="account-amount">ทั้งหมด: 0.00171 BTC</p>
+                <p class="account-in-order">ตามลำดับ: 0.00000 BTC</p>
+            </div>
+            <div class="account-actions2">
+                <button class="account-btn-buy">ซื้อเหรียญ</button>
+                <button class="account-btn-sell">ขายเหรียญ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ลิงก์ที่ใช้ในการเปลี่ยนหน้า -->
+<a href="#wallet-page" onclick="showPage('wallet-page')">
+    <i class="fas fa-wallet"></i>
+    กระเป๋า
+</a>
+
+<script>
+    function showPage(pageId) {
+        // ซ่อนทุกหน้า
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => {
+            page.classList.remove('active-page');
+        });
+
+        // แสดงหน้าที่ถูกเลือก
+        const activePage = document.getElementById(pageId);
+        if (activePage) {
+            activePage.classList.add('active-page');
+        }
+    }
+
+    // ตรวจสอบว่ามีการกดลิงก์ไปยังหน้าไหนเมื่อโหลดหน้าเว็บ
+    document.addEventListener('DOMContentLoaded', function () {
+        const hash = window.location.hash.substring(1); // เอา # ออก
+        if (hash) {
+            showPage(hash);
+        } else {
+            // ถ้าไม่มี hash ให้แสดงหน้าแรกสุด
+            showPage('wallet-page');
+        }
+    });
+</script>
+
+</body>
+</html>

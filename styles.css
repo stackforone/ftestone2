@@ -1,0 +1,1444 @@
+@media (max-width: 768px) {
+    .scroll-text-container {
+        bottom: 20vh; /* ปรับตำแหน่งสำหรับหน้าจอขนาดเล็ก */
+    }
+}
+
+/* Center content and set max width on larger screens */
+@media (min-width: 769px) {
+    .page, .content, .main-content {
+        max-width: 400px; /* ลดขนาดของ container ให้แคบลง */
+        margin: 0 auto; /* Center the content */
+        padding: 10px; /* เพิ่ม padding เพื่อให้เนื้อหาไม่ชิดขอบมากเกินไป */
+    }
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: white;
+}
+
+.page {
+    padding-bottom: 60px; /* เพิ่มระยะห่างจากเมนูด้านล่าง */
+}
+
+.page {
+    display: none; /* ซ่อนทุกหน้าโดยเริ่มต้น */
+}
+
+#home-page,{
+    display: block; /* แสดงหน้าแรกและศูนย์บุคคล */
+}
+/* Header Section */
+/* ส่วนนี้สร้างแถบสีดำที่ด้านบนสุด */
+/* แถบสีดำเล็ก ๆ ด้านบน */
+/* แถบสีดำด้านบนสุด */
+.header-container2 {
+    background-color: black;
+    height: 11px; /* ความสูงของแถบสีดำ */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+/* ส่วนของ header */
+.header2 {
+    padding: 20px;
+    background: linear-gradient(180deg, #1A7F32 0%, #00B167 100%);
+    color: white;
+    text-align: left;
+    border-radius: 0 0 10px 10px; /* ขอบโค้งเฉพาะด้านล่าง */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    min-height: 120px;
+}
+
+/* ปรับขนาดและตำแหน่งของธงไทย */
+.flag-icon {
+    position: absolute;
+    top: 20px; /* ปรับระยะห่างจากด้านบน */
+    right: 20px; /* ปรับระยะห่างจากด้านขวา */
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+/* ปรับขนาดและระยะห่างของข้อความ */
+.header2 h2 {
+    margin: 0;
+    font-size: 16px; /* ขนาดฟอนต์ของหัวข้อ */
+    color: white;
+}
+
+.header2 p1{
+    margin: 7px 0;
+    font-size: 13px; /* ขนาดฟอนต์ของข้อความทั่วไป */
+    color: white;
+}
+.header2 p {
+    margin: 7px 0;
+    font-size: 12px; /* ขนาดฟอนต์ของข้อความทั่วไป */
+    color: white;
+}
+
+.header2 .user-info p1 {
+    margin: 5px 0;
+    font-size: 18px; /* ขนาดฟอนต์สำหรับชื่อ */
+    color: white;
+}
+
+.user-info {
+    padding-top: 10px;
+}
+
+
+/* Content Section for Profile Page */
+.content {
+    background-color: #101010;
+    padding: 22px ; /* เพิ่ม padding เพื่อให้มีระยะขอบภายใน */
+    margin: -20px auto 0 auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8); /* เงาสีดำ */
+    max-width: 80%; /* ขยายขนาดของกล่อง */
+    min-height: 200px;
+    position: relative;
+    z-index: 2;
+}
+
+.icon-item img {
+    width: 32px; /* ขนาดความกว้างของรูปภาพ */
+    height: 32px; /* ขนาดความสูงของรูปภาพ */
+    background-color: #222;
+    border-radius: 50%; /* วงกลมรอบรูปภาพ */
+    padding: 3px; /* ระยะห่างรอบไอคอนหรือรูปภาพ เพื่อเพิ่มขนาดวงกลม */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    margin-bottom: 5px;
+    object-fit: cover; /* ทำให้รูปภาพอยู่ภายในวงกลมอย่างเหมาะสม */
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 11px;
+    justify-items: center;
+    align-items: start;
+}
+
+.icon-item {
+    text-align: center;
+}
+
+.icon-item i {
+    font-size: 16px;
+    background-color: #222;
+    color: #ffffff; /* สีไอคอน */
+    padding: 11px;
+    border-radius: 50%; /* วงกลมรอบไอคอน */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.icon-item p {
+    font-size: 9px;
+    margin: 0;
+}
+
+.status {
+    font-size: 12px;
+    color: #3CB371;
+}
+
+.status1 {
+    font-size: 12px;
+    color: #3CB371;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #1A1A1A;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0;
+    max-width: 400px; /* ให้แถบเมนูมีความกว้างเท่ากับ content */
+    box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.bottom-nav a {
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.bottom-nav a i {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.bottom-nav a.active {
+    color: #00FF00;
+}
+
+.bottom-nav a {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.bottom-nav a:focus {
+    outline: none;
+}
+
+/* Coin Card for Contracts or Deposit Pages */
+.coin-card {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coin-card img {
+    width: 40px;
+    height: 40px;
+}
+
+.coin-info p {
+    margin: 0;
+    color: white;
+}
+
+.coin-card button {
+    background-color: #00b36b;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Top Actions for Homepage or Main Menu */
+.top-actions {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.action {
+    background-color: #1A1A1A;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    width: 30%;
+    color: white;
+}
+
+/* Tab Navigation for Home */
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab {
+    background-color: #00b36b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #00FF00;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tabs button.active {
+    background-color: #00FF00; /* Green color for active tab */
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/* Crypto List for Cryptocurrency Page */
+.crypto-list {
+    padding: 0 15px;
+}
+
+.crypto-item {
+    background-color: #1A1A1A;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.crypto-info {
+    display: flex;
+    align-items: center;
+}
+
+.crypto-info img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.crypto-graph {
+    text-align: right;
+}
+
+.crypto-graph img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.flag-icon {
+    position: absolute; /* ทำให้รูปอยู่ในตำแหน่งที่เกี่ยวข้องกับ parent container */
+    top: 17px; /* ปรับระยะห่างจากด้านบน */
+    right: 13px; /* ปรับระยะห่างจากด้านขวา */
+    width: 30px; /* ขนาดของรูปภาพ */
+    height: 30px; /* ขนาดของรูปภาพ */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    overflow: hidden; /* ซ่อนส่วนเกิน */
+    object-fit: cover; /* ปรับรูปให้เข้ากับ container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* เพิ่มเงาเพื่อให้ดูสวยงาม */
+    z-index: 10; /* ให้ธงอยู่ด้านบนของเนื้อหาอื่นๆ */
+}
+
+/* Container ของข้อความเลื่อน */
+.scroll-text-container {
+    display: flex;
+    justify-content: flex-start; /* ทำให้ไอคอนลำโพงไม่หายไป */
+    align-items: center;
+    background-color: #101010;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 31vh; /* ปรับให้แถบอยู่เหนือเมนู */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* ไอคอนลำโพง */
+.scroll-text-container i {
+    position: relative;
+    z-index: 10;
+    right: -20px; /* ขยับไปทางขวา */
+    font-size: 17px;
+    color: #4E5C5B; /* สีของไอคอน */
+}
+
+/* Container ของข้อความเลื่อน */
+.scrolling-content {
+    overflow: hidden;
+    white-space: nowrap;
+    flex-grow: 1;
+    position: relative;
+}
+
+/* ข้อความเลื่อน */
+.scroll-text {
+    display: inline-block;
+    font-size: 11px;
+    z-index: 1px;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite; /* ปรับการเลื่อนให้ต่อเนื่องและเริ่มทันที */
+}
+
+/* การเคลื่อนไหวของข้อความ */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* เริ่มต้นที่ด้านขวาสุด */
+    }
+    100% {
+        transform: translateX(-100%); /* สิ้นสุดที่ด้านซ้ายสุด */
+    }
+}
+
+/* ข้อความด้านบนซ้าย */
+.management-header {
+    background-color: #000; /* สีพื้นหลัง */
+    padding: 20px;
+    text-align: left; /* ข้อความชิดซ้าย */
+    color: white; /* สีข้อความ */
+    margin-bottom: 20px;
+    position: absolute;
+    top: 0;
+    left: 20px; /* ระยะจากขอบซ้าย */
+}
+
+.management-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #32CD32; /* สีเขียว */
+}
+
+.management-header p {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+/* ไอคอน 3 ขีดมุมขวาบน */
+.menu-toggle {
+    position: absolute;
+    top: 10px; /* ระยะจากขอบบน */
+    right: 20px; /* ระยะจากขอบขวา */
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+}
+
+/* ไอคอนลอยทางซ้ายล่าง */
+.floating-button {
+    position: absolute;
+    bottom: 70px; /* ปรับตำแหน่งขึ้น */
+    left: 20px; /* ตำแหน่งจากขอบซ้าย */
+    background-color: rgba(255, 255, 255, 0.1); /* สีพื้นหลังที่มีความโปร่งใสเล็กน้อย */
+    color: white;
+    border: none;
+    padding: 12px; /* ปรับขนาดปุ่ม */
+    border-radius: 10px; /* ทำให้มุมโค้งมนตามตัวอย่าง */
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-button i {
+    font-size: 16px;
+    color: white;
+}
+
+/* เมนูสไลด์ */
+.slide-menu {
+    position: fixed;
+    left: -500px; /* ซ่อนเมนูเมื่อไม่ได้เปิด */
+    top: 0;
+    width: 180px;
+    height: 83%;
+    background-color: rgba(26, 26, 26, 0.85); /* โปร่งบาง */
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 999;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slide-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.slide-menu ul li {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+}
+
+.slide-menu ul li i {
+    margin-right: 10px;
+}
+
+.arrow {
+    margin-left: auto;
+}
+
+.close-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.accordion-content {
+    display: none;
+    padding-left: 20px;
+    font-size: 11px;
+}
+
+.accordion-content p {
+    margin-bottom: 15px; /* เพิ่มระยะห่างด้านล่าง */
+    font-size: 11px;
+}
+
+.accordion-content.show {
+    display: block;
+}
+
+.close-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.slide-menu.active {
+    left: 0; /* แสดงเมนูเมื่อเปิด */
+}
+
+.blur-background {
+    filter: blur(8px);
+}
+
+#content-wrapper.blur-background {
+    filter: blur(8px);
+}
+
+.tradingview-widget-container {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%; /* ปรับขนาดให้เต็ม */
+    min-height: 400px; /* สามารถปรับได้ตามที่ต้องการ */
+}
+
+#tradingview_btc_chart {
+    width: 100%;
+    height: 100%; /* ให้เต็มขนาด container */
+}
+
+.trade-buttons {
+    display: flex;
+    justify-content: flex-end; /* จัดปุ่มไปทางขวา */
+    padding: 10px;
+    background-color: #000;
+    margin-bottom: 10px;
+    z-index: 10;
+}
+
+.trade-buttons button {
+    font-family: 'Kanit', sans-serif;
+    font-size: 13px; /* ลดขนาดฟอนต์ลง */
+    font-weight: 500;
+    padding: 4px 8px; /* ลด padding ข้างในปุ่ม */
+    border-radius: 5px; /* ลดขอบมนของปุ่ม */
+    margin-left: 10px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+    width: 120px; /* กำหนดความกว้างปุ่มให้ชัดเจน */
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.buy-button {
+    background-color: #28a745; /* สีเขียว */
+}
+
+.sell-button {
+    background-color: #dc3545; /* สีแดง */
+}
+
+.more-options {
+    position: absolute;
+    left: 13px; /* ปรับตำแหน่งจากด้านซ้าย */
+    bottom: 65px; /* ตำแหน่งจากด้านล่าง */
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.more-options button {
+    display: flex;
+    flex-direction: column; /* จัดไอคอนและข้อความในแนวตั้ง */
+    align-items: center; /* จัดให้อยู่ตรงกลาง */
+    justify-content: center;
+    padding: 0;
+    font-size: 10px;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    background-color: transparent;
+    border: none;
+    margin-right: 10px; /* ระยะห่างระหว่างปุ่ม */
+}
+
+.more-button i, .alert-button i {
+    font-size: 12px; /* ขนาดไอคอนใหญ่ขึ้นเล็กน้อย */
+    margin-bottom: 3px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+.more-button, .alert-button {
+    background-color: transparent; /* พื้นหลังโปร่งใส */
+}
+
+.more-button i {
+    color: white;
+}
+
+.alert-button i {
+    color: white;
+}
+
+/* CSS สำหรับ modal */
+        .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #d50000;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00e676;
+    margin-bottom: 20px;
+}
+
+.timer, .result-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.circle, .result-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #00e676;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#countdown {
+    font-size: 24px;
+    color: #00e676;
+}
+
+.confirmation-details {
+    background-color: #2e2e2e;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.confirmation-details p {
+    margin: 5px 0;
+}
+
+#confirmBtn, #finalConfirmBtn {
+    width: 100%;
+    padding: 12px;
+    background-color: #00e676;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+}
+
+
+.result-circle {
+    background-color: #333333;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    color: #ffffff;
+    border: 5px solid #00e676; /* สีเขียวสำหรับชนะ */
+}
+
+.result-circle .text {
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.5; /* ปรับระยะห่างระหว่างบรรทัด */
+}
+
+#resultStatus {
+    color: #00e676;
+    font-size: 18px;
+}
+
+#resultProfit {
+    font-size: 24px;
+    color: #00e676;
+}
+
+.coin-buttons, .reward-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.coin-buttons button, .reward-buttons button {
+    font-family: 'Kanit', sans-serif;
+    width: 23%;
+    padding: 10px;
+    background-color: #333333;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.reward-buttons button {
+    font-size: 12px;
+}
+
+.reward-buttons button.active {
+    background-color: #00e676;
+    color: #000000;
+}
+
+.amount-display {
+    background-color: #333333;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+#submitBtn {
+    font-family: 'Kanit', sans-serif;
+    width: 100%;
+    padding: 12px;
+    background-color: #00e676;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.close {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #00e676;
+    position: relative;
+    margin-right: 10px;
+}
+
+.text {
+    color: #00e676;
+    font-size: 20px;
+    text-align: center;
+}
+
+.confirmation-details {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#confirmBtn {
+    width: 100%;
+    padding: 12px;
+    background-color: #00e676;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000000;
+    cursor: not-allowed;
+}
+
+#confirmBtn.disabled {
+    background-color: #555555;
+    color: #999999;
+}
+
+        .header-image img {
+            max-width: 100px;
+        }
+
+        .tabs button {
+            background-color: #1a1a1a;
+            border: none;
+            padding: 15px;
+            font-size: 14px;
+            color: #ffffff;
+            cursor: pointer;
+            flex: 1;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+
+  .tabs {
+  display: flex;
+  background-color: #000;
+  padding: 0;
+  width: 100%;
+  justify-content: flex-start; /* จัดตำแหน่งให้อยู่ชิดซ้าย */
+    height: 34px;
+}
+
+#tab1 {
+  flex-grow: 1; /* ปรับให้ปุ่มขยายได้แต่ยังอยู่ภายในกรอบ */
+  background-color: #009e4e;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Kanit', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+  margin-left: 0; /* ทำให้ปุ่มติดขอบซ้าย */
+  margin-right: 40px;
+  z-index: 2;
+}
+
+#tab2 {
+  flex-grow: 1; /* ปรับให้ปุ่มขยายเท่ากัน */
+  background-color: #000;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Kanit', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+  z-index: 0px;
+  margin-right: -10px;
+}
+
+.tab {
+  flex: 1; /* ทำให้ปุ่มแต่ละปุ่มกินพื้นที่เท่ากัน */
+  background-color: #009e4e;
+  border: none;
+  padding: 0 6px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Kanit', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin: 0 5px; /* ระยะห่างระหว่างปุ่ม */
+  border-radius: 8px 8px 0 0;
+  font-weight: bold;
+  margin-left: -50px;
+}
+
+  .tab.active {
+            background-color: #009e4e;
+            font-weight: bold;
+        }
+
+  .sub-tabs {
+    display: flex;
+    background-color: #009e4e;
+    padding: 0;
+    justify-content: space-around;
+    font-size: 9px;
+  }
+
+  .sub-tabs button {
+    flex: 1;
+    background-color: #009e4e;
+    border: none;
+    padding: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-size: 5px;
+    font-weight: bold;
+  }
+
+   .sub-tabs button:nth-child(2) {
+  margin-left: 50px; /* ปรับระยะห่างของปุ่ม 'กราฟ' */
+}
+
+        .sub-tabs button.active {
+            background-color: #009e4e;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 0; /* ลบเส้นโค้งทั้งหมด */
+            z-index: 2;
+            margin-top: 0;
+            position: relative;
+            font-size: 14px;
+        }
+
+.tab-content .active {
+  height: 31px;
+}
+        
+        .market-data {
+            padding: 10px;
+            margin-top: 1px;
+        }
+        
+        .market-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 9px;
+    border-bottom: 1px solid #333333;
+    flex-wrap: nowrap;
+}
+        
+        .crypto-icon img {
+    width: 30px;
+    height: 30px;
+    margin-right: 13px;
+    transform: translate(4px, 3px); /* ปรับค่า translate(x, y) เพื่อขยับตำแหน่ง */
+          margin-left: 5px;
+}
+        
+        .crypto-details {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-left: 2px;
+        }
+        
+        .crypto-name {
+            font-size: 11px;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        
+        .crypto-volume {
+            font-size: 9px;
+            color: #ffffff;
+            margin-top: -3px;
+        }
+        
+        .crypto-graph {
+            margin-right: 10px;
+            margin-left: auto;
+            width: 70px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            background-color: #00c569;
+        }
+        
+        .crypto-price {
+    text-align: right;
+    white-space: nowrap;
+          margin-right: 24px;
+}
+        
+        .crypto-change {
+            color: #ff4d4d;
+            font-size: 12px;
+        }
+        
+.price {
+    font-size: 10px;
+    font-weight: normal; /* เปลี่ยนเป็นปกติ ไม่ใช้ bold */
+    margin: 0;
+}
+
+.change {
+    font-size: 10px;
+    margin: 0;
+}
+
+.header-image {
+    width: 100%; /* ขยายคอนเทนเนอร์ให้เต็มหน้าจอ */
+    text-align: center; /* จัดรูปภาพให้อยู่กลาง */
+}
+
+.header-image img {
+    width: 100%; /* ขยายรูปภาพให้เต็มคอนเทนเนอร์ */
+    height: auto; /* รักษาสัดส่วน */
+    max-width: none; /* ลบการควบคุมขนาดสูงสุด หากมี */
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px; /* ลด padding ให้เล็กลง */
+}
+
+.service-left, .service-box {
+    background-color: #333; /* เปลี่ยนสีพื้นหลัง */
+    padding: 5px; /* ลดขนาดภายในกล่อง */
+    margin: 3px; /* ลดขนาดระยะห่างภายนอก */
+    border-radius: 8px; /* ปรับมุมโค้งให้เล็กลง */
+    width: 80px; /* ปรับขนาดให้เล็กลง */
+    height: auto;
+}
+
+.service-left {
+    background-color: #1c1c1c;
+    padding: 10px; /* เพิ่ม padding ภายใน */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* ทำให้ไอเท็มอยู่ในแนวนอน */
+    justify-content: space-between; /* เว้นระยะห่างระหว่างไอเท็ม */
+    width: 140px; /* ปรับความกว้างให้มากขึ้น */
+    height: 55px; /* ความสูง */
+    margin-left: 34px; /* ขยับกล่องไปทางขวา */
+}
+
+.service-left .icon {
+    margin-left: -5px ; /* ลดค่าเพื่อขยับรูปไปทางซ้าย */
+    margin-right: 10px; /* ถ้าต้องการเว้นระยะห่างจากข้อความ */
+}
+
+.service-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* ลด gap ระหว่างกล่องด้านขวา */
+}
+
+.service-box {
+    background-color: #1c1c1c;
+    padding: 2px; /* ลด padding ของกล่อง */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 120px; /* ลดความกว้างของกล่อง */
+    height: 30px; /* ลดความสูงของกล่อง */
+    margin-right: 36px; /* ขยับกล่องไปทางซ้าย */
+    margin-top: -3px; /* ขยับกล่องขึ้นบน */
+}
+
+.service-box .icon img {
+    width: 19px; /* ขนาดของไอคอน */
+    height: 19px;
+    margin-left: 8px;
+}
+
+.icon img {
+    width: 45px; /* ลดขนาดไอคอน */
+    height: 45px;
+}
+
+.service-details {
+    margin-left: 19px; /* ลดระยะห่างระหว่างไอคอนและข้อความ */
+    gap: 10px;
+}
+
+.service-details p {
+   margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 10px;
+}
+
+.title {
+    font-size: 9px; /* ลดขนาดฟอนต์ของชื่อบริการ */
+    margin: 0;
+}
+
+.description {
+    margin: 2px 0; /* ลด margin ระหว่างบรรทัด */
+    font-size: 1px; /* ลดขนาดฟอนต์ของคำอธิบาย */
+}
+
+.crypto-list {
+    margin: 0;
+    color: #9e9e9e;
+    font-size: 12px; /* ลดขนาดฟอนต์ของรายการสกุลเงิน */
+}
+
+.service-details .description {
+    font-size: 8px; /* ปรับขนาดตัวอักษร */
+    margin: 0;
+}
+
+.service-info {
+    display: flex; /* ทำให้ container เป็น flexbox */
+    flex-direction: column; /* จัดเรียงองค์ประกอบในแนวตั้ง */
+    text-align: left; /* จัดข้อความให้อยู่ชิดซ้าย */
+    margin-right: 20px; /* ปรับระยะห่างจากไอคอนทางขวา */
+}
+
+.service-info .main-title {
+    font-size: 12px !important; /* ขนาดตัวอักษรของ "ปัก" */
+    font-weight: bold; /* ทำให้ข้อความหนา */
+    margin: 0 0 10px 0; /* ระยะห่างด้านล่างของ "ปัก" */
+}
+
+.service-info .sub-title {
+    font-size: 9px !important; /* ขนาดตัวอักษรของ "บริการออนไลน์" */
+    margin: 0 0 5px 0; /* ระยะห่างด้านล่างของ "บริการออนไลน์" */
+}
+
+.service-info .crypto-details {
+    font-size: 9px !important; /* ขนาดตัวอักษรของ "บิทคอยน์, USDT, ETH" */
+    margin: 0; /* ไม่มีระยะห่างเพิ่มจากด้านบนหรือด้านล่าง */
+    white-space: nowrap; /* ป้องกันข้อความตัดบรรทัด */
+}
+
+.service-info .main-title,
+.service-info .sub-title,
+.service-info .crypto-details {
+    display: block; /* ใช้ block แทน inline-block เพื่อให้ข้อความแต่ละบรรทัดแยกกันชัดเจน */
+    margin: 0 0 5px 0; /* ปรับระยะห่างระหว่างบรรทัด */
+    line-height: 0.9; /* ปรับระยะห่างระหว่างบรรทัด */
+    font-size: 11px; /* ขนาดตัวอักษร */
+}
+
+.service-info .sub-title {
+    font-size: 11px; /* ปรับขนาดตัวอักษรให้สอดคล้องกับความยาวที่ต้องการ */
+    white-space: nowrap; /* ป้องกันข้อความตัดลงบรรทัดใหม่ */
+}
+
+.wallet-page {
+    padding: 10px;
+}
+
+.header-container3 {
+    background-color: black;
+    height: 11px; /* ความสูงของแถบสีดำ */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ส่วนของ header */
+.header3 {
+    padding: 20px;
+    background: linear-gradient(180deg, #1A7F32 0%, #00B167 100%);
+    color: white;
+    text-align: left;
+    border-radius: 0 0 10px 10px; /* ขอบโค้งเฉพาะด้านล่าง */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-height: 120px;
+}
+
+.content2 {
+    background-color: #101010;
+    padding: 22px ; /* เพิ่ม padding เพื่อให้มีระยะขอบภายใน */
+    margin: -20px auto 0 auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8); /* เงาสีดำ */
+    max-width: 80%; /* ขยายขนาดของกล่อง */
+    min-height: 200px;
+    position: relative;
+}
+
+.header3 h2 {
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.header3 p {
+  font-size: 15px;
+}
+
+.header3 p2 {
+  font-size: 11px;
+}
+
+.header3 h2 {
+  font-size: 11px;
+}
+
+.header3 h2, .header3 p, .header3 h3, .header3 p2 {
+    margin: 0;
+    padding: 0;
+    line-height: 1.9; /* ลดระยะห่างระหว่างบรรทัด */
+}
+
+.wallet-icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.wallet-icon-item {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.wallet-icon-item i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.wallet-icon-item p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+}
+
+.wallet-icon-item p.status {
+    color: #f00;
+}
+
+h4 {
+    margin-top: 20px;
+}
+
+.wallet-coin-card {
+    background-color: #333;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.wallet-coin-card p {
+    margin: 5px 0;
+    color: white;
+}
+
+.wallet-buy-btn,
+.wallet-sell-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.wallet-buy-btn {
+    background-color: green;
+}
+
+.wallet-sell-btn {
+    background-color: red;
+}
+
+.wallet-bottom-nav {
+    background-color: #222;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #333;
+}
+
+.wallet-bottom-nav a {
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.wallet-bottom-nav a.active {
+    color: #00a65a;
+}
+
+.account-summary {
+    margin: 20px;
+    margin-top: -30px;
+}
+
+.account-title {
+    color: #6b6b6b;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.account-card {
+    background-color: #242424;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account-icon {
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.account-img {
+    width: 28px;
+    height: 28px;
+}
+
+.account-info {
+    flex-grow: 1;
+    font-size: 10px;
+}
+
+.account-info p{
+     font-size: 9px;
+}
+
+.account-currency-name {
+    margin: 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.account-amount,
+.account-availability,
+.account-in-order {
+    margin: 0;
+    color: #b5b5b5;
+    font-size: 14px;
+}
+
+.account-actions {
+    display: flex;
+    gap: 10px;
+    width: 70px;
+    height: 25px;
+    margin-right: -6px;
+}
+
+.account-actions2 {
+    display: flex;
+    gap: 10px;
+    width: 10px;
+    height: 25px;
+    margin-right: 140px;
+}
+
+.account-btn-deposit,
+.account-btn-buy,
+.account-btn-sell {
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+.account-btn-deposit {
+    background-color: #00a65a;
+    font-family: 'Kanit', sans-serif;
+    font-size: 10px;
+}
+
+.account-btn-buy,
+.account-btn-sell {
+    background-color: #00a65a; /* สำหรับปุ่มซื้อ */
+    font-family: 'Kanit', sans-serif;
+    font-size: 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    line-height: 1.5; /* ปรับ line-height เพื่อให้ฟอนต์สูงขึ้น */
+    white-space: nowrap; /* ทำให้ข้อความไม่ตัดบรรทัด */
+}
+
+.account-btn-sell {
+    background-color: #dd4b39; /* สำหรับปุ่มขาย */
+}
+

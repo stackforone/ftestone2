@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การตั้งค่าเว็บไซต์ - EA Forex Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body, h1, h2, h3, h4, h5, h6, p, a, label, input, button, div, span {
+            font-family: 'Kanit', sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #1e1e1e;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header img {
+            width: 150px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .breadcrumb {
+            color: #00c853;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .breadcrumb a {
+            color: #00c853;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            margin-right: 5px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            color: #ffffff;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #1e1e1e;
+        }
+        .form-group .currency-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group .currency-group input {
+            width: calc(50% - 5px);
+            text-align: center;
+        }
+        .checkbox-group {
+            margin-bottom: 20px;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .checkbox-group .note {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .button-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-group button {
+            background-color: #2962ff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button-group button:hover {
+            background-color: #0039cb;
+        }
+        .system-settings {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .system-settings h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .system-settings p {
+            font-size: 14px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="logo.png" alt="EA Forex Premium">
+    </div>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="#">ตั้งค่าระบบเว็บ</a> <span>-</span> <a href="#">ตั้งค่า คำแนะนำหน้า</a>
+        </div>
+
+        <h1>การตั้งค่าเว็บไซต์</h1>
+
+        <div class="form-group">
+            <label for="website-name">ชื่อเว็บไซต์</label>
+            <input type="text" id="website-name" value="EAFOREXPREMIUM">
+        </div>
+
+        <div class="form-group">
+            <label for="announcement">ประกาศ</label>
+            <input type="text" id="announcement" value="การยืนยันตัวตนเปิดให้ใช้งานตามปกติ การตรวจสอบ">
+        </div>
+
+        <div class="form-group currency-group">
+            <div>
+                <label for="line-id">ไลน์ไอดี</label>
+                <input type="text" id="line-id" placeholder="ไลน์ไอดี">
+            </div>
+            <div>
+                <label for="email">อีเมล</label>
+                <input type="text" id="email" placeholder="อีเมล">
+            </div>
+        </div>
+
+        <div class="form-group currency-group">
+            <div>
+                <label for="min-withdraw">ถอนขั้นต่ำ</label>
+                <input type="text" id="min-withdraw" value="0">
+            </div>
+            <div>
+                <label for="max-withdraw">ถอนสูงสุดต่อรายการ</label>
+                <input type="text" id="max-withdraw" value="10">
+            </div>
+        </div>
+
+        <div class="system-settings">
+            <h2>ระบบเว็บไซต์</h2>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox">
+                    เป็นไปตามที่คุณรู้
+                </label>
+            </div>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" checked>
+                    แสดงเปอร์เซ็นต์หน้าเทรด
+                </label>
+            </div>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox">
+                    ส่วนปุ่มแอดไลน์
+                </label>
+                <p class="note">*เมื่อรู้สึกว่าปุ่มซื้อเหรียญหนักฝากถอนจะถูกปิดเช่นกันเพราะปุ่มซื้อเหรียญใช้ระบบแอดไลน์เหมือนกัน</p>
+            </div>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox">
+                    ไม่ใช่ปุ่มติดต่ออีเมล์
+                </label>
+            </div>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox">
+                    การควบคุมระบบฝ่ายบริการลูกค้า
+                </label>
+            </div>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox">
+                    จะต้องระบบถอนเงินเข้าธนาคาร
+                </label>
+            </div>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox">
+                    หลังจากนั้นระบบถอนเงินเข้ากระเป๋าดิจิตอล
+                </label>
+            </div>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox">
+                    ปิดรับสมัครสมาชิกใหม่
+                </label>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button>บันทึก</button>
+        </div>
+    </div>
+    <!-- ปุ่มย้อนกลับ -->
+    <div style="position: fixed; top: 10px; right: 10px; z-index: 9999;">
+    <button onclick="goBack()" style="background:none; border:none; font-size: 24px; color: #ffffff;">
+        &#x2190; <!-- ลูกศรย้อนกลับ -->
+    </button>
+</div>
+
+    <!-- ฟังก์ชัน JavaScript -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

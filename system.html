@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EA Forex Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        
+         body, input, select, button {
+    font-family: 'Kanit', sans-serif;
+}
+    
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .header img {
+            width: 150px;
+        }
+        .breadcrumb {
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #32cd32;
+        }
+        .section {
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section-title {
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+        .radio-group {
+            margin-bottom: 15px;
+        }
+        .radio-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+        .radio-group input {
+            margin-right: 10px;
+        }
+        .radio-group label .hint {
+            color: red;
+            font-size: 0.8em;
+            display: block;
+            margin-top: 5px;
+        }
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .input-group input, .input-group select {
+            width: 48%;
+            padding: 10px;
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .checkbox-group {
+            margin-bottom: 20px;
+        }
+        .checkbox-group input {
+            margin-right: 10px;
+        }
+        .checkbox-group label {
+            font-size: 0.9em;
+        }
+        .button-save {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .section {
+            font-family: 'Kanit', sans-serif;
+        }
+        .input-group input::placeholder {
+        font-size: 0.9em; /* ขนาดตัวอักษรที่ต้องการ */
+    }
+
+    .input-group select option {
+        font-size: 0.3em; /* ขนาดตัวอักษรที่ต้องการ */
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="EA Forex Premium">
+        </div>
+
+        <div class="breadcrumb">ตั้งค่าระบบเว็บ - ตั้งค่าเทรด</div>
+
+        <div class="section">
+            <div class="section-title">ประเภทเทรด</div>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="trade-type" checked>
+                    เทรดแบบไม่มีขั้นต่ำ
+                    <span class="hint">*เมื่อลูกค้าสามารถเลือกเวลาเทรดได้เอง</span>
+                </label>
+                <label>
+                    <input type="radio" name="trade-type">
+                    เทรดแบบมีขั้นต่ำ
+                    <span class="hint">*เมื่อปล่อยให้ลูกค้าสามารถเลือกเวลาเทรดเองได้ ระบบที่เพิ่มมากขึ้นตาม...</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">ตั้งค่าเทรด 30 วินาที</div>
+            <div class="input-group">
+                <input type="text" placeholder="เริ่มต้นเทรดขั้นต่ำ">
+                <select>
+                    <option>ดอลลาร์สหรัฐ</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="เริ่มเทรดสูงสุด">
+                <select>
+                    <option>ดอลลาร์สหรัฐ</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="text" value="15">
+                <select>
+                    <option>-</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">ตั้งค่าเทรด 60 วินาที</div>
+            <div class="input-group">
+                <input type="text" placeholder="เริ่มต้นเทรดขั้นต่ำ">
+                <select>
+                    <option>ดอลลาร์สหรัฐ</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="เริ่มเทรดสูงสุด">
+                <select>
+                    <option>ดอลลาร์สหรัฐ</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="text" value="30">
+                <select>
+                    <option>-</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">ที่</div>
+            <div class="input-group">
+                <input type="text" value="20">
+                <select>
+                    <option>-</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">ตั้งค่าเทรด 90 วินาที</div>
+            <div class="input-group">
+                <input type="text" placeholder="เริ่มต้นเทรดขั้นต่ำ">
+                <select>
+                    <option>ดอลลาร์สหรัฐ</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="text" placeholder="เริ่มเทรดสูงสุด">
+                <select>
+                    <option>ดอลลาร์สหรัฐ</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="text" value="30">
+                <select>
+                    <option>-</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">ตั้งค่าเทรด 120 วินาที</div>
+            <div class="input-group">
+                <input type="text" value="50000">
+                <select>
+                    <option>ดอลลาร์สหรัฐ</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="text" value="50">
+                <select>
+                    <option>-</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">บริษัทเทรด</div>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> ไม่ว่าระบบเทรดซื้อขาย</label><br>
+                <label><input type="checkbox"> ติดตามระบบเทรดขึ้นลง</label>
+            </div>
+        </div>
+
+        <a href="#" class="button-save">บันทึก</a>
+    </div>
+  
+    <!-- ปุ่มย้อนกลับ -->
+    <div style="position: fixed; top: 10px; right: 10px; z-index: 9999;">
+    <button onclick="goBack()" style="background:none; border:none; font-size: 24px; color: #ffffff;">
+        &#x2190; <!-- ลูกศรย้อนกลับ -->
+    </button>
+</div>
+
+    <!-- ฟังก์ชัน JavaScript -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

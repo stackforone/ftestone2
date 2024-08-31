@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ศูนย์ควบคุม</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+   <style>
+        .page {
+            display: none;
+        }
+        /* ตั้งค่าให้หน้าแรกแสดงเมื่อเปิดเว็บ */
+        #home-page {
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+     
+    <!-- หน้าแรก -->
+<div class="page" id="home-page">
+    <div class="header">
+        <div class="header-content">
+            <div class="header-image">
+                <img src="head.jpg" alt="Image Description">
+            </div>
+        </div>
+    </div>
+
+    <section class="services">
+    <!-- Left service box -->
+    <div class="service-left">
+    <div class="service-info">
+    <p class="main-title">ปัก</p>
+    <p class="sub-title">บริการออนไลน์</p>
+    <p class="crypto-details">บิทคอยน์, USDT, ETH</p>
+</div>
+    <div class="icon">
+        <img src="ico-pay.png" alt="">
+    </div>
+</div>
+
+    <!-- Right side services -->
+    <div class="service-right">
+        <!-- First right service box -->
+        <div class="service-box">
+            <div class="icon">
+                <img src="ico-position.png" alt="">
+            </div>
+            <div class="service-details">
+                <p class="title">การเทรดจริงๆ</p>
+                <p class="description">แชท</p>
+            </div>
+        </div>
+
+        <!-- Second right service box -->
+        <div class="service-box">
+            <div class="icon">
+                <img src="ico-help.png" alt="">
+            </div>
+            <div class="service-details">
+                <p class="title">ฝ่ายบริการลูกค้า</p>
+                <p class="description">เว็บบอร์ดออนไลน์</p>
+            </div>
+        </div>
+    </div>
+</section>
+<nav class="tabs">
+    <button id="tab1" class="tab active" onclick="showTab('currencyControl', this)">ระบบควบคุมเคอร์เรนซี</button>
+    <button id="tab2" class="tab" onclick="showTab('forex', this)">ฟอเร็กซ์</button>
+</nav>
+
+    <!-- เนื้อหาแท็บระบบควบคุมเคอร์เรนซี -->
+<div id="currencyControl" class="tab-content active">
+    <div class="sub-tabs">
+        <button class="active" style="font-family: 'Kanit', sans-serif; font-size: 11px; font-weight: normal;">คู่</button>
+        <button class="active" style="font-family: 'Kanit', sans-serif; font-size: 11px; font-weight: normal;">กราฟ</button>
+        <button class="active" style="font-family: 'Kanit', sans-serif; font-size: 11px; font-weight: normal;">ราคาล่าสุด</button>
+    </div>
+</div>
+ <section class="market-data">
+            <div class="market-item">
+        <div class="crypto-icon">
+            <img src="bitcoin-cryptocurrency.svg" alt="BTC">
+        </div>
+        <div class="crypto-details">
+            <p class="crypto-name">บีทีซี/ดอลลาร์สหรัฐ</p>
+            <p class="crypto-volume">เล่มที่: 61015.60</p>
+        </div>
+        <div class="crypto-price">
+            <p class="price">61118.20</p>
+            <p class="change" style="color: #00A950;">
+                <i class="fas fa-caret-up"></i> 0.383%
+            </p>
+        </div>
+    </div>
+
+    <div class="market-item">
+        <div class="crypto-icon">
+            <img src="ethereum-cryptocurrency.svg" alt="ETH">
+        </div>
+        <div class="crypto-details">
+            <p class="crypto-name">อีทีเอช/ดอลลาร์สหรัฐ</p>
+            <p class="crypto-volume">เล่มที่: 2676.43</p>
+        </div>
+        <div class="crypto-price">
+            <p class="price">2627.26</p>
+            <p class="change" style="color: #C24E49;">
+                <i class="fas fa-caret-down"></i> -0.156%
+            </p>
+        </div>
+    </div>
+
+    <div class="market-item">
+        <div class="crypto-icon">
+            <img src="eos.png" alt="EOS">
+        </div>
+        <div class="crypto-details">
+            <p class="crypto-name">อีโอเอส/ดอลลาร์สหรัฐ</p>
+            <p class="crypto-volume">เล่มที่: 0.489</p>
+        </div>
+        <div class="crypto-price">
+            <p class="price">0.516</p>
+            <p class="change" style="color: #00A950;">
+                <i class="fas fa-caret-up"></i> 2.326%
+            </p>
+        </div>
+    </div>
+
+    <div class="market-item">
+        <div class="crypto-icon">
+            <img src="bch-svgrepo-com.svg" alt="BCH">
+        </div>
+        <div class="crypto-details">
+            <p class="crypto-name">บีซีเอช/ดอลลาร์สหรัฐ</p>
+            <p class="crypto-volume">เล่มที่: 353.09</p>
+        </div>
+        <div class="crypto-price">
+            <p class="price">349.16</p>
+            <p class="change" style="color: #C24E49;">
+                <i class="fas fa-caret-down"></i> -0.816%
+            </p>
+        </div>
+    </div>
+            
+          <div class="market-item">
+        <div class="crypto-icon">
+            <img src="litecoin.png" alt="BCH">
+        </div>
+        <div class="crypto-details">
+            <p class="crypto-name">เเอลทีซี/ดอลลาร์สหรัฐ</p>
+            <p class="crypto-volume">เล่มที่: 65.75</p>
+        </div>
+        <div class="crypto-price">
+            <p class="price">65.75</p>
+            <p class="change" style="color: #00A950;">
+                <i class="fas fa-caret-up"></i> 0.517%
+            </p>
+        </div>
+    </div>
+          
+            <div class="market-item">
+        <div class="crypto-icon">
+            <img src="bch-svgrepo-com.svg" alt="BCH">
+        </div>
+        <div class="crypto-details">
+            <p class="crypto-name">บีซีเอช/ดอลลาร์สหรัฐ</p>
+            <p class="crypto-volume">เล่มที่: 353.09</p>
+        </div>
+        <div class="crypto-price">
+            <p class="price">349.16</p>
+            <p class="change" style="color: #ff4d4d;">
+                <i class="fas fa-caret-down"></i> -0.816%
+            </p>
+        </div>
+    </div>
+          
+            <div class="market-item">
+        <div class="crypto-icon">
+            <img src="bch-svgrepo-com.svg" alt="BCH">
+        </div>
+        <div class="crypto-details">
+            <p class="crypto-name">บีซีเอช/ดอลลาร์สหรัฐ</p>
+            <p class="crypto-volume">เล่มที่: 353.09</p>
+        </div>
+        <div class="crypto-price">
+            <p class="price">349.16</p>
+            <p class="change" style="color: #ff4d4d;">
+                <i class="fas fa-caret-down"></i> -0.816%
+            </p>
+        </div>
+    </div>
+          
+           <div class="market-item">
+        <div class="crypto-icon">
+            <img src="bch-svgrepo-com.svg" alt="BCH">
+        </div>
+        <div class="crypto-details">
+            <p class="crypto-name">บีซีเอช/ดอลลาร์สหรัฐ</p>
+            <p class="crypto-volume">เล่มที่: 353.09</p>
+        </div>
+        <div class="crypto-price">
+            <p class="price">349.16</p>
+            <p class="change" style="color: #ff4d4d;">
+                <i class="fas fa-caret-down"></i> -0.816%
+            </p>
+        </div>
+    </div>
+            
+            <div class="market-item">
+        <div class="crypto-icon">
+            <img src="bch-svgrepo-com.svg" alt="BCH">
+        </div>
+        <div class="crypto-details">
+            <p class="crypto-name">บีซีเอช/ดอลลาร์สหรัฐ</p>
+            <p class="crypto-volume">เล่มที่: 353.09</p>
+        </div>
+        <div class="crypto-price">
+            <p class="price">349.16</p>
+            <p class="change" style="color: #ff4d4d;">
+                <i class="fas fa-caret-down"></i> -0.816%
+            </p>
+        </div>
+    </div>
+          
+            <div class="market-item">
+        <div class="crypto-icon">
+            <img src="bch-svgrepo-com.svg" alt="BCH">
+        </div>
+        <div class="crypto-details">
+            <p class="crypto-name">บีซีเอช/ดอลลาร์สหรัฐ</p>
+            <p class="crypto-volume">เล่มที่: 353.09</p>
+        </div>
+        <div class="crypto-price">
+            <p class="price">349.16</p>
+            <p class="change" style="color: #ff4d4d;">
+                <i class="fas fa-caret-down"></i> -0.816%
+            </p>
+        </div>
+    </div>
+          
+            <div class="market-item">
+        <div class="crypto-icon">
+            <img src="bch-svgrepo-com.svg" alt="BCH">
+        </div>
+        <div class="crypto-details">
+            <p class="crypto-name">บีซีเอช/ดอลลาร์สหรัฐ</p>
+            <p class="crypto-volume">เล่มที่: 353.09</p>
+        </div>
+        <div class="crypto-price">
+            <p class="price">349.16</p>
+            <p class="change" style="color: #ff4d4d;">
+                <i class="fas fa-caret-down"></i> -0.816%
+            </p>
+        </div>
+    </div>
+            
+            <div class="market-item">
+        <div class="crypto-icon">
+            <img src="bch-svgrepo-com.svg" alt="BCH">
+        </div>
+        <div class="crypto-details">
+            <p class="crypto-name">บีซีเอช/ดอลลาร์สหรัฐ</p>
+            <p class="crypto-volume">เล่มที่: 353.09</p>
+        </div>
+        <div class="crypto-price">
+            <p class="price">349.16</p>
+            <p class="change" style="color: #ff4d4d;">
+                <i class="fas fa-caret-down"></i> -0.816%
+            </p>
+        </div>
+    </div>
+          
+            <div class="market-item">
+        <div class="crypto-icon">
+            <img src="bch-svgrepo-com.svg" alt="BCH">
+        </div>
+        <div class="crypto-details">
+            <p class="crypto-name">บีซีเอช/ดอลลาร์สหรัฐ</p>
+            <p class="crypto-volume">เล่มที่: 353.09</p>
+        </div>
+        <div class="crypto-price">
+            <p class="price">349.16</p>
+            <p class="change" style="color: #ff4d4d;">
+                <i class="fas fa-caret-down"></i> -0.816%
+            </p>
+        </div>
+    </div>
+</section>
+</div>
+    
+
+   
+      
+
+    <!-- หน้าเทรด -->
+    <div class="page" id="trade-page">
+        <div class="trade-header">
+            <h2></h2>
+            <p></p>
+        </div>
+
+        <div class="trading-view">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div id="tradingview_btc_chart"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                    new TradingView.widget({
+                        "container_id": "tradingview_btc_chart",
+                        "autosize": true,
+                        "symbol": "BINANCE:BTCUSDT",
+                        "interval": "30",
+                        "timezone": "Asia/Bangkok",
+                        "theme": "dark",
+                        "style": "1",
+                        "locale": "th",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "hide_side_toolbar": false,
+                        "allow_symbol_change": true,
+                        "details": true,
+                        "studies": [
+                            "RSI@tv-basicstudies"
+                        ],
+                        "show_popup_button": true,
+                        "popup_width": "1000",
+                        "popup_height": "650"
+                    });
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+
+        <div class="trade-buttons">
+    <button class="buy-button" onclick="openModal()">ใส่</button>
+    <button class="sell-button">เรียก</button>
+</div>
+
+<div id="modalScreen" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p class="modal-title">บิทคอยน์ USDT</p>
+
+        <div class="coin-buttons">
+            <button onclick="selectCoin(this)">100 เหรียญสหรัฐ</button>
+            <button onclick="selectCoin(this)">200 เหรียญสหรัฐ</button>
+            <button onclick="selectCoin(this)">500 เหรียญสหรัฐ</button>
+            <button onclick="selectCoin(this)">1,000 เหรียญสหรัฐ</button>
+        </div>
+
+        <div class="amount-display">
+            <span>จำนวน</span>
+            <span id="selectedAmount">0</span>
+            <span>ดอลลาร์สหรัฐ</span>
+        </div>
+
+        <div class="reward-buttons">
+            <button onclick="selectReward(this)" class="active">30 ช. 15.00%</button>
+            <button onclick="selectReward(this)">60 ชั่วโมง 20.00%</button>
+            <button onclick="selectReward(this)">90 ชั่วโมง 30.00%</button>
+            <button onclick="selectReward(this)">120 ณ 50.00%</button>
+        </div>
+
+        <button id="submitBtn" onclick="proceedToConfirmation()">ซื้อมากขึ้น</button>
+    </div>
+</div>
+
+<div id="confirmationScreen" class="modal">
+    <div class="modal-content">
+        <p class="modal-title">ยืนยัน</p>
+        <div class="timer">
+            <div class="circle"></div>
+            <div class="text">เวลา<br><span id="countdown">59</span></div>
+        </div>
+        <div class="confirmation-details">
+            <p></p>
+            <p>ขึ้น/ลง: ขึ้น</p>
+            <p>เวลา: <span id="selectedReward">90 ชั่วโมง 30.00%</span></p>
+            <p>ประเภทเหรียญ: BTCUSDT</p>
+            <p>จำนวนเหรียญที่ซื้อ: <span id="confirmedAmount">500</span> เหรียญสหรัฐ</p>
+        </div>
+        <button id="confirmBtn" onclick="showResult()">ยืนยัน</button>
+    </div>
+</div>
+
+<div id="resultScreen" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeResultModal()">&times;</span>
+        <p class="modal-title">สำเร็จ</p>
+        <div class="result-circle">
+            <div class="text">
+                <span id="resultStatus">คุณแพ้การเทรด</span>
+                <br>ได้กำไร <span id="resultProfit">-200</span>
+            </div>
+        </div>
+        <div class="confirmation-details">
+            <p></p>
+            <div class="details">
+                <p>ขึ้น/ลง: ขึ้น</p>
+                <p>เวลา: 60 ชั่วโมง</p>
+                <p>ประเภทเหรียญ: BTCUSDT</p>
+                <p>จำนวนเหรียญที่ซื้อ: 200 เหรียญสหรัฐ</p>
+            </div>
+        </div>
+        <button id="finalConfirmBtn">ลงชื่อเข้าใช้</button>
+    </div>
+</div>
+
+    <script>
+        function openModal() {
+    document.getElementById('modalScreen').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('modalScreen').style.display = 'none';
+}
+
+function selectCoin(button) {
+    document.querySelectorAll('.coin-buttons button').forEach(btn => {
+        btn.style.backgroundColor = '#333333';
+        btn.style.color = '#ffffff';
+    });
+    button.style.backgroundColor = '#00e676';
+    button.style.color = '#000000';
+    document.getElementById('selectedAmount').textContent = button.textContent.split(' ')[0];
+}
+
+function selectReward(button) {
+    document.querySelectorAll('.reward-buttons button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    button.classList.add('active');
+}
+
+function showResult() {
+    // ปิดหน้าจอยืนยัน
+    document.getElementById('confirmationScreen').style.display = 'none';
+
+    // สุ่มผลลัพธ์
+    const resultStatus = document.getElementById('resultStatus');
+    const resultProfit = document.getElementById('resultProfit');
+
+    const isSuccess = Math.random() > 0.5;
+    if (isSuccess) {
+        resultStatus.textContent = 'คุณชนะการเทรด';
+        resultProfit.textContent = 'ได้กำไร +200';
+        document.querySelector('.result-circle').style.borderColor = '#00e676'; // สีเขียวสำหรับชนะ
+        resultProfit.style.color = '#00e676';
+    } else {
+        resultStatus.textContent = 'คุณแพ้การเทรด';
+        resultProfit.textContent = 'ได้กำไร -200';
+        document.querySelector('.result-circle').style.borderColor = '#d50000'; // สีแดงสำหรับแพ้
+        resultProfit.style.color = '#d50000';
+    }
+
+    // เปิดหน้าจอแสดงผลลัพธ์
+    document.getElementById('resultScreen').style.display = 'flex';
+}
+
+function proceedToConfirmation() {
+    // ปิดโมดอลปัจจุบัน
+    closeModal();
+
+    // อัปเดตข้อมูลในหน้าจอยืนยัน
+    document.getElementById('confirmedAmount').textContent = document.getElementById('selectedAmount').textContent;
+    document.getElementById('selectedReward').textContent = document.querySelector('.reward-buttons button.active').textContent;
+
+    // เปิดหน้าจอยืนยัน
+    document.getElementById('confirmationScreen').style.display = 'flex';
+
+    // เริ่มตัวจับเวลา
+    startCountdown();
+}
+
+function startCountdown() {
+    let countdown = 59;
+    const interval = setInterval(() => {
+        document.getElementById('countdown').textContent = countdown;
+        countdown--;
+
+        if (countdown < 0) {
+            clearInterval(interval);
+            document.getElementById('confirmBtn').disabled = false;
+            document.getElementById('confirmBtn').classList.remove('disabled');
+            document.getElementById('confirmBtn').textContent = 'ยืนยัน';
+        }
+    }, 1000);
+}
+
+
+function closeResultModal() {
+    document.getElementById('resultScreen').style.display = 'none';
+}
+    </script>
+        
+        <div class="more-options">
+            <button class="more-button">
+            <i class="fas fa-ellipsis-h"></i> มากกว่า
+        </button>
+        <button class="alert-button">
+            <i class="fas fa-bell"></i> เตือน
+        </button>
+        </div>
+    </div>
+
+    <!-- หน้าประวัติ -->
+    <div class="page" id="history-page">
+        <div class="header">
+            <h2>สัญญา ฝากเหรียญ</h2>
+            <p>โปรดศึกษารายละเอียด นโยบาย ข้อมูล และความเสี่ยงของกองทุน</p>
+        </div>
+        <div class="content">
+            <h3>เหรียญทั้งหมดของคุณ</h3>
+            <div class="coin-card">
+                <img src="https://cdn.bitkubnow.com/coins/icon/32/BNB.png" alt="BNB">
+                <div class="coin-info">
+                    <p>BNB</p>
+                    <p>Total: 0.00000 BNB</p>
+                    <p>In Order: 0.00000 BNB</p>
+                </div>
+                <button style="font-family: 'Kanit', sans-serif;">ฝากเหรียญ</button>
+            </div>
+            <div class="coin-card">
+                <img src="bitcoin-cryptocurrency.svg" alt="BTC">
+                <div class="coin-info">
+                    <p>BTC</p>
+                    <p>Total: 0.00000 BTC</p>
+                    <p>In Order: 0.00000 BTC</p>
+                </div>
+                <button style="font-family: 'Kanit', sans-serif;">ฝากเหรียญ</button>
+            </div>
+            <div class="coin-card">
+                <img src="ethereum-cryptocurrency.svg" alt="ETH">
+                <div class="coin-info">
+                    <p>ETH</p>
+                    <p>Total: 0.00000 ETH</p>
+                    <p>In Order: 0.00000 ETH</p>
+                </div>
+                <button style="font-family: 'Kanit', sans-serif;">ฝากเหรียญ</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- หน้าศูนย์บุคคล -->
+    <div class="page" id="profile-page">
+        <div class="header-container2"></div>
+        <div class="header2">
+            <h2>ศูนย์บุคคล</h2>
+            <p>ชื่อ ฟีม ปิยะพงษ์</p>
+            <p>ยูเซอร์เนม ff00</p>
+            <p>รหัส 78888</p>
+            <img src="thai.jpg" alt="โลโก้ไทย" class="flag-icon">
+        </div>
+
+        <div class="content">
+            <div class="icon-grid">
+                <div class="icon-item">
+                    <img src="pp.png">
+                    <p>ยืนยันตัวตน v1</p>
+                    <p class="status1">สำเร็จเเล้ว</p>
+                </div>
+                <div class="icon-item">
+                    <img src="pp.png">
+                    <p>ยืนยันตัวตน v2</p>
+                    <p class="status">สำเร็จเเล้ว</p>
+                </div>
+                <div class="icon-item">
+                    <img src="pp2.png">
+                    <p>ประวัติการเทรด</p>
+                </div>
+                <div class="icon-item">
+                    <img src="pp3.png">
+                    <p>ฝ่ายบริการลูกค้า</p>
+                </div>
+                <div class="icon-item">
+                    <img src="pp4.png">
+                    <p>ติดต่อ Line</p>
+                </div>
+                <div class="icon-item">
+                    <img src="pp5.png">
+                    <p>ติดต่ออีเมล์</p>
+                </div>
+                <div class="icon-item">
+                    <img src="pp6.png">
+                    <p>โหลดแอพฯ</p>
+                </div>
+                <div class="icon-item" onclick="showPage('management-page')">
+                    <i class="fas fa-gavel"></i>
+                    <p>ระบบบริหารจัดการ</p>
+                </div>
+                <div class="icon-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <p>ออกจากระบบ</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+       <!-- หน้าระบบบริหารจัดการ -->
+<div class="page" id="management-page">
+    <!-- Wrapper ที่ครอบคลุมเฉพาะเนื้อหาที่จะเบลอ -->
+    <div id="content-wrapper">
+        <!-- ข้อความที่อยู่ด้านบนซ้าย -->
+        <div class="management-header">
+            <h2>ข่าวสาร</h2>
+            <p>ไม่พบข่าวสาร</p>
+        </div>
+
+        <!-- ไอคอน 3 ขีดมุมขวาบน -->
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- ไอคอนลอยทางซ้ายล่าง -->
+        <button class="floating-button" onclick="toggleSlideMenu()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+    </div>
+
+    <!-- เมนูสไลด์ออกมาจากด้านซ้าย -->
+<div id="slide-menu" class="slide-menu">
+    <ul>
+        <li>
+            <i class="fas fa-chart-pie"></i> แดชบอร์ด <span class="arrow">&#9660;</span>
+        </li>
+        <li>
+            <i class="fas fa-users"></i> เกี่ยวกับลูกค้า <span class="arrow">&#9660;</span>
+        </li>
+        <li>
+            <i class="fas fa-coins"></i> เกี่ยวกับเทรด <span class="arrow">&#9660;</span>
+        </li>
+        <li>
+            <i class="fas fa-exchange-alt"></i> ระบบฝาก/ถอน <span class="arrow">&#9660;</span>
+        </li>
+        <li onclick="toggleAccordion('chat-menu')">
+    <i class="fas fa-comments"></i> ระบบแชท <span class="arrow">&#9660;</span>
+</li>
+<div class="accordion-content" id="chat-menu">
+    <p onclick="showChatPage()">แชทกับลูกค้า</p>
+</div>
+
+<!-- หน้าสำหรับแชทกับลูกค้า -->
+<div class="page" id="chat-page" style="display:none;">
+    <div class="chat-page">
+        <h2>ระบบแชท - แชทกับลูกค้า</h2>
+        <h3>แชทกับลูกค้า</h3>
+        
+        <div class="search-container">
+            <input type="text" placeholder="ป้อนข้อมูลส่วนตัว">
+            <button>ค้นหา</button>
+        </div>
+
+        <table class="chat-table">
+            <thead>
+                <tr>
+                    <th>ยูไอดี</th>
+                    <th>ชื่อผู้ใช้</th>
+                    <th>โอเพ่นแชท</th>
+                    <th>สถานะ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>238956</td>
+                    <td>สเวนนันด์</td>
+                    <td><button class="chat-button">คุยแชท</button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>311055</td>
+                    <td>เดโม01</td>
+                    <td><button class="chat-button">คุยแชท</button></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+        <li onclick="toggleAccordion('settings-menu')">
+            <i class="fas fa-cogs"></i> ตั้งค่าระบบเว็บ <span class="arrow">&#9660;</span>
+        </li>
+        <div class="accordion-content" id="settings-menu">
+    <p onclick="navigateToSettings()">ตั้งค่าคำนำหน้า</p>
+    <p>ตั้งค่าโลโก้ & ธีม & แชท</p>
+    <p>ตั้งค่า Top Graphic</p>
+    <p>ตั้งค่า Popup</p>
+    <p onclick="navigateToSystem()">ตั้งค่า เทรด</p>
+    <p>ตั้งค่า โหลดแอพ</p>
+    <p>ตั้งค่า ช่องทางเติมเงิน</p>
+</div>
+
+<script>
+    function navigateToSettings() {
+        window.location.href = "settings.html";
+    }
+
+    function navigateToSystem() {
+        window.location.href = "system.html";
+    }
+      
+    function showChatPage() {
+        window.location.href = "chat-width.html";
+    }
+</script>
+  
+  
+
+<script>
+    function toggleAccordion(id) {
+        var content = document.getElementById(id);
+        var arrow = content.previousElementSibling.querySelector('.arrow');
+
+        // เปิด/ปิดเมนูย่อย
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            arrow.innerHTML = "&#9660;";
+        } else {
+            content.style.display = "block";
+            arrow.innerHTML = "&#9650;";
+        }
+    }
+</script>
+        <button class="close-button" onclick="toggleSlideMenu()">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</div>
+
+<!-- เมนูด้านล่าง -->
+<div class="bottom-nav">
+    <a href="#home-page" class="active" onclick="showPage('home-page')">
+        <i class="fas fa-home"></i>
+        หน้าแรก
+    </a>
+    <a href="#trade-page" onclick="showPage('trade-page')">
+        <i class="fas fa-dollar-sign"></i>
+        ซื้อขาย
+    </a>
+    <a href="#history-page" onclick="showPage('history-page')">
+        <i class="fas fa-file-alt"></i>
+        เครื่องหมาย
+    </a>
+    <a href="#wallet-page" onclick="showPage('wallet-page')">
+        <i class="fas fa-wallet"></i>
+        กระเป๋า
+    </a>
+    <a href="#profile-page" onclick="showPage('profile-page')">
+        <i class="fas fa-user"></i>
+        ศูนย์บุคคล
+    </a>
+</div>
+
+<!-- สคริปต์จัดการการทำงาน -->
+<script>
+    function showPage(pageId) {
+    var pages = document.querySelectorAll('.page');
+    pages.forEach(function(page) {
+        page.style.display = 'none';
+    });
+
+    // แสดงหน้าที่ต้องการ
+    var selectedPage = document.getElementById(pageId);
+    if (selectedPage) {
+        selectedPage.style.display = 'block';
+    } else {
+        console.error('Page with ID ' + pageId + ' not found');
+    }
+
+    // ลบ class active จากทุกลิงก์
+    var navLinks = document.querySelectorAll('.bottom-nav a');
+    navLinks.forEach(function(nav) {
+        nav.classList.remove('active');
+    });
+
+    // เพิ่ม class active ให้กับลิงก์ที่สอดคล้องกับหน้าที่แสดง
+    var activeLink = document.querySelector(`.bottom-nav a[href="#${pageId}"]`);
+    if (activeLink) {
+        activeLink.classList.add('active');
+    }
+}
+
+    function toggleSlideMenu() {
+        const menu = document.getElementById('slide-menu');
+        const contentWrapper = document.getElementById('content-wrapper');
+        
+        if (menu.classList.contains('active')) {
+            menu.classList.remove('active');
+            contentWrapper.classList.remove('blur-background');
+        } else {
+            menu.classList.add('active');
+            contentWrapper.classList.add('blur-background');
+        }
+    }
+    
+    function toggleAccordion(menuId) {
+    const content = document.getElementById(menuId);
+    const header = content.previousElementSibling;
+
+    // ซ่อนเมนูย่อยอื่นๆ
+    document.querySelectorAll('.accordion-content').forEach(item => {
+        if (item !== content) {
+            item.style.display = 'none';
+            item.previousElementSibling.classList.remove('active');
+        }
+    });
+
+    // เปิดหรือปิดเมนูที่เลือก
+    if (content.style.display === "block") {
+        content.style.display = "none";
+        header.classList.remove('active');
+    } else {
+        content.style.display = "block";
+        header.classList.add('active');
+    }
+}
+
+    function toggleAccordion(id) {
+    var content = document.getElementById(id);
+    var arrow = content.previousElementSibling.querySelector('.arrow');
+
+    if (content.style.display === "block") {
+        content.style.display = "none";
+        arrow.innerHTML = "&#9660;"; // เปลี่ยนเป็นลูกศรลง
+    } else {
+        content.style.display = "block";
+        arrow.innerHTML = "&#9650;"; // เปลี่ยนเป็นลูกศรขึ้น
+    }
+}
+
+   type="text/javascript">
+    new TradingView.widget({
+        "container_id": "tradingview_btc_chart",
+        "width": "100%",
+        "height": "550", /* ปรับขนาดให้ตรงกับ CSS */
+        "symbol": "BINANCE:BTCUSDT",
+        "interval": "30",
+        "timezone": "Asia/Bangkok",
+        "theme": "dark",
+        "style": "1",
+        "locale": "th",
+        "toolbar_bg": "#f1f3f6",
+        "enable_publishing": false,
+        "hide_side_toolbar": false,
+        "allow_symbol_change": true,
+        "details": true,
+        "studies": [
+            "RSI@tv-basicstudies"
+        ],
+        "show_popup_button": true,
+        "popup_width": "1000",
+        "popup_height": "650"
+    });
+
+    function showTab(tabId, element) {
+    // ซ่อนเนื้อหาของแท็บทั้งหมด
+    var tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(function(tabContent) {
+        tabContent.classList.remove('active');
+    });
+
+    // แสดงเนื้อหาของแท็บที่ถูกเลือก
+    var selectedTabContent = document.getElementById(tabId);
+    if (selectedTabContent) {
+        selectedTabContent.classList.add('active');
+    }
+
+    // ลบคลาส active จากปุ่มแท็บทั้งหมด
+    var tabs = document.querySelectorAll('.tabs button');
+    tabs.forEach(function(tab) {
+        tab.classList.remove('active');
+    });
+
+    // เพิ่มคลาส active ให้กับปุ่มแท็บที่ถูกคลิก
+    element.classList.add('active');
+}
+</script>
+</body>
+</html>
